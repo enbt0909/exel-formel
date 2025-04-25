@@ -77,7 +77,7 @@ p {
 
 p {
   margin: 20px 0;
-  color: var(--color-footer-text);
+  /* color: var(--color-footer-text); */
   text-shadow: 0 0 5px var(--color-highlight),
     1px 1px 5px var(--color-highlight);
 }
