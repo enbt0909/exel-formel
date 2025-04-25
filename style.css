@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* Base Styles */
@@ -33,95 +34,78 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   max-width: 800px;
+  margin: 0 auto;
   background: url('./baum.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
 /* Main Section */
 #main {
-  font-family: inherit;
   font-weight: bold;
-  backdrop-filter: blur(55px);
-  background-blend-mode: soft-light, screen, overlay, difference, normal;
   padding: 1.5em 1em;
   border-radius: 0.3em;
   line-height: 2.5em;
+  backdrop-filter: blur(10px);
   background-image: linear-gradient(
     160deg,
     rgba(var(--color-primary), 0.5),
-    rgba(var(--color-secondary), 0.5),
-    rgba(var(--color-secondary), 0.5),
-    rgba(var(--color-primary), 0.5)
+    rgba(var(--color-secondary), 0.5)
   );
   background-size: 100%;
   background-position: center;
+  transition: all 2s ease-in-out;
 }
 
 /* Headings and Text */
 h1 {
   text-align: center;
   padding-top: 1em;
+  margin-bottom: 1.5em;
   color: var(--color-footer-text);
   text-shadow: 0 0 5px var(--color-highlight),
-    1px 1px 5px var(--color-highlight), 2px 2px 5px var(--color-highlight),
-    3px 3px 5px var(--color-highlight), 4px 4px 5px var(--color-highlight),
-    5px 5px 5px var(--color-highlight), 6px 6px 5px var(--color-highlight),
-    7px 7px 5px var(--color-highlight), 8px 8px 5px var(--color-highlight),
-    9px 9px 5px var(--color-highlight);
-  margin-bottom: 1.5em;
+    1px 1px 5px var(--color-highlight);
 }
 
 h1,
 h2,
 h3,
 p {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px var(--color-accent),
-    3px 3px 1px rgba(255, 255, 255, 0.1);
   color: var(--color-accent);
+  /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px var(--color-accent); */
+  text-shadow: 0 1px 1px #427687, -1px -1px 1px #427687;
 }
 
 p {
+  margin: 20px 0;
   color: var(--color-footer-text);
   text-shadow: 0 0 5px var(--color-highlight),
-    1px 1px 5px var(--color-highlight), 2px 2px 5px var(--color-highlight),
-    3px 3px 5px var(--color-highlight), 4px 4px 5px var(--color-highlight),
-    5px 5px 5px var(--color-highlight), 6px 6px 5px var(--color-highlight),
-    7px 7px 5px var(--color-highlight), 8px 8px 5px var(--color-highlight),
-    9px 9px 5px var(--color-highlight);
-  margin: 20px 0;
+    1px 1px 5px var(--color-highlight);
 }
 
 /* Terminal */
 .terminal {
-  border-radius: 0.5em;
   border-left: 0.1em solid rgba(var(--color-primary), 0.5);
   padding: 0.5em;
   font-family: 'Courier New', Courier, monospace;
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8), -1px -1px 1px var(--color-accent);
   background-image: linear-gradient(
     160deg,
     rgba(var(--color-highlight), 0.5),
-    rgba(var(--color-secondary), 0.5),
-    rgba(var(--color-secondary), 0.5),
-    rgba(var(--color-highlight), 0.5)
+    rgba(var(--color-secondary), 0.5)
   );
   background-size: 100%;
   background-position: center;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8), -1px -1px 1px var(--color-accent);
 }
 
 p.terminal {
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
-  /* color: var(--color-primary); */
   color: var(--color-text);
-  text-shadow: 0 0 1px var(--color-accent), 0 1px 1px var(--color-accent),
-    -1px -1px 1px var(--color-accent), -1px 1px 1px var(--color-accent),
-    2px 2px 1px var(--color-accent), 2px -2px 1px var(--color-accent);
+  text-shadow: 0 0 1px var(--color-accent), 0 1px 1px var(--color-accent);
 }
 
 /* Lists */
@@ -141,21 +125,23 @@ ul li {
 /* Buttons */
 button,
 .button {
-  background-color: var(--color-button-bg);
-  color: var(--color-footer-text);
-  border: none;
+  display: inline-block;
+  width: 100%;
   padding: 10px 20px;
   font-size: 16px;
+  font-family: inherit;
   cursor: pointer;
+  border: none;
   border-radius: 0.5em;
   text-align: center;
-  width: 100%;
+  background-color: var(--color-button-bg);
+  color: var(--color-footer-text);
   transition: all 0.2s ease-in-out;
 }
 
 button:hover,
-.button:focus,
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--color-button-hover);
   color: var(--color-text);
 }
@@ -164,8 +150,7 @@ button:active,
 .button:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
     0 3px 6px var(--color-button-active-shadow),
-    inset 0 -2px 5px 1px var(--color-button-active-inset),
-    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    inset 0 -2px 5px 1px var(--color-button-active-inset);
 }
 
 button:focus-visible {
@@ -174,18 +159,12 @@ button:focus-visible {
 }
 
 .button {
-  touch-action: manipulation;
-  display: inline-block;
-  outline: none;
-  font-family: inherit;
-  font-size: 1em;
   height: 2.75em;
   line-height: 2.5em;
   padding: 0 1em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
     0 3px 6px var(--color-button-active-shadow),
-    inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
-    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    inset 0 -2px 5px 1px rgba(139, 66, 8, 1);
   background-image: linear-gradient(
     160deg,
     #a54e07,
@@ -194,18 +173,15 @@ button:focus-visible {
     #bc881b,
     #a54e07
   );
+  background-size: 100% 100%;
   color: rgb(120, 50, 5);
   text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
-  background-size: 100% 100%;
-  background-position: center;
 }
 
-.button:focus,
-.button:hover {
+.button:hover,
+.button:focus {
   background-size: 150% 150%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23),
-    inset 0 -2px 5px 1px var(--color-button-active-inset),
-    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23);
   color: rgba(120, 50, 5, 0.8);
 }
 
@@ -217,14 +193,21 @@ button:focus-visible {
 .footer {
   margin-top: 20px;
   color: var(--color-footer-text);
-  text-shadow: 1px 1px 5px #111, 2px 2px 5px #111, 3px 3px 1px #111;
+  text-shadow: 1px 1px 5px #111, 2px 2px 5px #111;
+}
+
+/* Animation */
+@keyframes rotierung {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
 }
 
 /* Responsive */
 @media (min-width: 601px) {
-  body {
-    margin: 0 auto;
-  }
   .button {
     display: block;
   }
@@ -233,12 +216,10 @@ button:focus-visible {
 @media (max-width: 319px) {
   .button {
     display: inline-block;
-    width: 100%;
     height: max-content;
   }
   #main {
     width: 100%;
     font-size: 0.8em;
-    margin: 0 auto;
   }
 }
