@@ -47,28 +47,35 @@ body {
 h1 {
   text-align: center;
   padding-top: 1em;
+  color: #fff;
+  text-shadow: #6b8972 0px 0px 5px, #6b8972 1px 1px 5px, #6b8972 2px 2px 5px,
+    #6b8972 3px 3px 5px, #6b8972 4px 4px 5px, #6b8972 5px 5px 5px,
+    #6b8972 6px 6px 5px, #6b8972 7px 7px 5px, #6b8972 8px 8px 5px,
+    #6b8972 9px 9px 5px;
+  margin: 20px 0;
 }
 
 h1,
 h2,
 h3,
-p {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+p,
+.terminal {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.15),
+    3px 3px 1px rgba(255, 255, 255, 0.1);
+  color: #8cafbf;
 }
 
 p {
-  /* color: rgb(9, 9, 9); */
-  /* color: #181f39cc; */
   color: #fff;
-  text-shadow: #a54e07 0px 0px 5px, #a54e07 1px 1px 5px, #a54e07 2px 2px 5px,
-    #a54e07 3px 3px 5px, #a54e07 4px 4px 5px, #a54e07 5px 5px 5px,
-    #a54e07 6px 6px 5px, #a54e07 7px 7px 5px, #a54e07 8px 8px 5px,
-    #a54e07 9px 9px 5px;
+  text-shadow: #6b8972 0px 0px 5px, #6b8972 1px 1px 5px, #6b8972 2px 2px 5px,
+    #6b8972 3px 3px 5px, #6b8972 4px 4px 5px, #6b8972 5px 5px 5px,
+    #6b8972 6px 6px 5px, #6b8972 7px 7px 5px, #6b8972 8px 8px 5px,
+    #6b8972 9px 9px 5px;
   margin: 20px 0;
 }
 
 .terminal {
-  background-color: rgba(68, 127, 168, 0.5);
+  /* background-color: rgba(68, 127, 168, 0.5); */
   border-radius: 0.5em;
   border-left: 4px solid rgba(244, 244, 244, 0.5);
   padding: 10px;
@@ -79,10 +86,10 @@ p {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(
     160deg,
-    rgba(68, 127, 168, 0.5),
+    rgba(107, 137, 114, 0.5),
     rgba(244, 244, 244, 0.5),
     rgba(244, 244, 244, 0.5),
-    rgba(68, 127, 168, 0.5)
+    rgba(107, 137, 114, 0.5)
   );
   background-size: 100% 100%;
   background-position: center;
@@ -91,12 +98,11 @@ p {
 
 p.terminal {
   text-align: center;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 1px 1px #fff,
-    0 0 5px rgba(0, 0, 0, 0.2), 1px 1px #fff, 0 0 5px rgba(0, 0, 0, 0.2),
-    1px 1px #fff;
   font-size: 1.2em;
   font-weight: bold;
-  color: #1c1c1c;
+  text-shadow: 0 0 1px rgba(9, 9, 9, 0.5), 0 1px 1px rgba(9, 9, 9, 0.5),
+    -1px -1px 1px rgba(9, 9, 9, 0.5), -1px 1px 1px rgba(9, 9, 9, 0.5),
+    2px 2px 1px rgba(140, 175, 191, 0.5), 2px -2px 1px rgba(140, 175, 191, 0.5);
 }
 
 ul {
@@ -149,7 +155,6 @@ button:focus-visible {
   outline: none;
   font-family: inherit;
   font-size: 1em;
-  box-sizing: border-box;
   border: none;
   border-radius: 0.3em;
   height: 2.75em;
@@ -166,7 +171,7 @@ button:focus-visible {
     #bc881b,
     #a54e07
   );
-  border: 1px solid #a55d07;
+  /* border: 1px solid #a55d07; */
   color: rgb(120, 50, 5);
   text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
   cursor: pointer;
@@ -178,21 +183,24 @@ button:focus-visible {
 .button:hover {
   background-size: 150% 150%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
-    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-  border: 1px solid rgba(165, 93, 7, 0.6);
+    inset 0 -2px 5px 1px rgb(177, 125, 16),
+    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  /* border: 1px solid rgba(165, 93, 7, 0.2); */
   color: rgba(120, 50, 5, 0.8);
 }
 .button:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
-    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    inset 0 -2px 5px 1px rgb(177, 125, 16),
+    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
 }
-/* ********** */
 
 .footer {
   margin-top: 20px;
-  /* border: solid 5px red; */
+  color: #fff;
+  text-shadow: 1px 1px 5px #111, 2px 2px 5px #111, 3px 3px 1px #111;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
   body {
     padding: 2px;
