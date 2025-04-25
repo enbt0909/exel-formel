@@ -57,7 +57,13 @@ p {
 }
 
 p {
-  color: rgb(9, 9, 9);
+  /* color: rgb(9, 9, 9); */
+  /* color: #181f39cc; */
+  color: #fff;
+  text-shadow: #a54e07 0px 0px 5px, #a54e07 1px 1px 5px, #a54e07 2px 2px 5px,
+    #a54e07 3px 3px 5px, #a54e07 4px 4px 5px, #a54e07 5px 5px 5px,
+    #a54e07 6px 6px 5px, #a54e07 7px 7px 5px, #a54e07 8px 8px 5px,
+    #a54e07 9px 9px 5px;
   margin: 20px 0;
 }
 
@@ -90,6 +96,7 @@ p.terminal {
     1px 1px #fff;
   font-size: 1.2em;
   font-weight: bold;
+  color: #1c1c1c;
 }
 
 ul {
@@ -136,7 +143,6 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* ********** */
 .button {
   touch-action: manipulation;
   display: inline-block;
