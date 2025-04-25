@@ -236,4 +236,9 @@ button:focus-visible {
     width: 100%;
     height: max-content;
   }
+  #main {
+    width: 100%;
+    font-size: 0.8em;
+    margin: 0 auto;
+  }
 }
