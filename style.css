@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: url('./baum.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+#main {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+h1,
+h2,
+h3 {
+  color: #333;
+}
+p {
+  margin: 10px 0;
+}
+.terminal {
+  background-color: #447fa8;
+  border-left: 4px solid rebeccapurple;
+  color: #f4f4f4;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+ul {
+  list-style-type: '🍀';
+  padding: 0;
+}
+ul p {
+  font-weight: bold;
+}
+ul li {
+  margin: 5px 0;
+}
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+}
