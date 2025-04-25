@@ -1,55 +1,200 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  color: rgb(50, 50, 50);
+}
+
 body {
   min-height: 100vh;
-  padding: 20px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 20px;
   max-width: 800px;
-  margin: auto;
   background: url('./baum.jpg') no-repeat center center fixed;
   background-size: cover;
 }
+
 #main {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
+  font-family: inherit;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  background-blend-mode: soft-light, screen, overlay, difference, normal;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+  line-height: 2.5em;
+  /* text-transform: uppercase; */
+  padding: 0 1em;
+  background-image: linear-gradient(
+    160deg,
+    rgba(68, 127, 168, 0.5),
+    rgba(244, 244, 244, 0.5),
+    rgba(244, 244, 244, 0.5),
+    rgba(68, 127, 168, 0.5)
+  );
+  background-size: 100%;
+  background-position: center;
 }
+
 h1 {
   text-align: center;
+  padding-top: 1em;
 }
+
 h1,
 h2,
-h3 {
-  color: #333;
-}
+h3,
 p {
-  margin: 10px 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+
+p {
+  color: rgb(9, 9, 9);
+  margin: 20px 0;
+}
+
 .terminal {
-  background-color: #447fa8;
-  border-left: 4px solid rebeccapurple;
-  color: #f4f4f4;
+  background-color: rgba(68, 127, 168, 0.5);
+  border-radius: 0.5em;
+  border-left: 4px solid rgba(244, 244, 244, 0.5);
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
   overflow-x: auto;
   white-space: pre-wrap;
+  word-wrap: break-word;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(
+    160deg,
+    rgba(68, 127, 168, 0.5),
+    rgba(244, 244, 244, 0.5),
+    rgba(244, 244, 244, 0.5),
+    rgba(68, 127, 168, 0.5)
+  );
+  background-size: 100% 100%;
+  background-position: center;
+  transition: all 0.2s ease-in-out;
 }
+
+p.terminal {
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 1px 1px #fff,
+    0 0 5px rgba(0, 0, 0, 0.2), 1px 1px #fff, 0 0 5px rgba(0, 0, 0, 0.2),
+    1px 1px #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 ul {
   list-style-type: '🍀';
   padding: 0;
 }
+
 ul p {
   font-weight: bold;
 }
+
 ul li {
   margin: 5px 0;
 }
-.footer {
+
+button {
+  background-color: rgba(68, 127, 168, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
   text-align: center;
-  margin-top: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0.5em;
+  text-align: center;
+  width: 100%;
 }
+button:hover {
+  background-color: rgba(244, 244, 244, 0.5);
+  color: rgb(50, 50, 50);
+}
+button:active {
+  background-color: rgba(244, 244, 244, 0.5);
+  color: rgb(50, 50, 50);
+}
+button:focus {
+  outline: none;
+}
+button:focus-visible {
+  outline: 2px solid rgba(244, 244, 244, 0.5);
+  outline-offset: 2px;
+}
+
+/* ********** */
+.button {
+  touch-action: manipulation;
+  display: inline-block;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.3em;
+  height: 2.75em;
+  line-height: 2.5em;
+  padding: 0 1em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+    inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  background-image: linear-gradient(
+    160deg,
+    #a54e07,
+    #b47e11,
+    #fef1a2,
+    #bc881b,
+    #a54e07
+  );
+  border: 1px solid #a55d07;
+  color: rgb(120, 50, 5);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.button:focus,
+.button:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  border: 1px solid rgba(165, 93, 7, 0.6);
+  color: rgba(120, 50, 5, 0.8);
+}
+.button:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+/* ********** */
+
+.footer {
+  margin-top: 20px;
+  /* border: solid 5px red; */
+}
+
 @media (max-width: 600px) {
   body {
-    padding: 10px;
+    padding: 2px;
+  }
+}
+
+@media (min-width: 601px) {
+  body {
+    margin: 0 auto;
   }
 }
