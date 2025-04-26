@@ -82,6 +82,11 @@ p {
     1px 1px 5px var(--color-highlight);
 }
 
+h2,
+p {
+  text-align: center;
+}
+
 /* Terminal */
 .terminal {
   border-left: 0.1em solid rgba(var(--color-primary), 0.5);
